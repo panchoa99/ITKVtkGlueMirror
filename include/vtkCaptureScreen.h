@@ -39,13 +39,13 @@ public:
   ~vtkCaptureScreen( )
     {}
 
-  void operator( ) ( const std::string& iFileName ) const
+  void operator( ) ( const std::string& iFileName )
     {
     Capture( m_Renderer, iFileName );
     }
 
   void operator( ) ( vtkRenderWindow* iRenderer,
-                     const std::string& iFileName ) const
+                     const std::string& iFileName )
     {
     m_Renderer = iRenderer;
     Capture( m_Renderer, iFileName );
