@@ -2,8 +2,10 @@ set(ITKVtkGlue_SRCS
   itkVTKImageExportBase.cxx
   vtkPolyDataBaselineComparison.cxx
   )
+if(NOT EMSCRIPTEN)
 if(NOT VTK_RENDERING_BACKEND STREQUAL "None")
   list(APPEND ITKVtkGlue_SRCS QuickView.cxx)
+endif()
 endif()
 
 
